@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    background-image: radial-gradient(circle, #ff00ff, #0000ff, #00ff00);
+    background: linear-gradient(135deg, #0f0c29, #1e4976, #3d6b99);
     color: navy;
     font-family: "Comic Sans MS", cursive;
     text-align: center;
@@ -36,3 +36,9 @@ body {
     color: cyan;
     font-weight: bold;
   }
+
+  .details {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
