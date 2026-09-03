@@ -1,0 +1,462 @@
+:root {
+  --navy: #0A225A;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  background: var(--white);
+  color: var(--navy);
+  line-height: 1.55;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.03em;
+}
+
+p, li, span, button, cite {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+  background: var(--navy);
+  border-bottom: 4px solid var(--navy);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.logo-mark {
+  color: var(--navy);
+  background: var(--white);
+  padding: 2px 8px;
+  margin-left: 6px;
+  font-size: 1.3rem;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navlinks li {
+  font-size: 0.85rem;
+}
+
+.navlinks a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.navlinks a:hover {
+  border-bottom: 2px solid var(--white);
+}
+
+/* --- Hero --- */
+
+.hero {
+  background: var(--white);
+  border-bottom: 4px solid var(--navy);
+  padding: 90px 0 70px 0;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  display: inline-block;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  margin: 0 0 20px 0;
+}
+
+/* --- CCC Logo (built with CSS, not an image) --- */
+
+.ccc-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 28px);
+}
+
+.ccc-logo-mark {
+  /* Fallback size if JS is unavailable; overridden to match the exact
+     height of .ccc-logo-text (top of "C" to bottom of "CONFERENCE"). */
+  width: clamp(4.5rem, 18vw, 9rem);
+  height: clamp(4.5rem, 18vw, 9rem);
+  flex-shrink: 0;
+  background: var(--navy);
+}
+
+.ccc-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+}
+
+.ccc-logo-line {
+  font-size: clamp(1.9rem, 8vw, 3.9rem);
+  line-height: 1;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.ccc-logo-rule {
+  /* Width is set by JS to exactly match the widest line above;
+     this is just a sane fallback if JS is unavailable. */
+  width: 100%;
+  height: 4px;
+  background: var(--navy);
+  margin: 14px 0 10px 0;
+}
+
+.ccc-logo-sub {
+  font-size: clamp(0.85rem, 3.3vw, 1.6rem);
+  /* Width and letter-spacing are set by JS so the word is justified to
+     span exactly the width of the lines above; this is just a fallback. */
+  width: 100%;
+  letter-spacing: 0.4em;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.hero-lede {
+  max-width: 720px;
+  margin: 0 auto 32px auto;
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Buttons --- */
+
+.btn {
+  display: inline-block;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 14px 28px;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btn-wide {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+/* --- Logo stripe --- */
+
+.stripe {
+  padding: 40px 24px;
+  text-align: center;
+  border-bottom: 4px solid var(--navy);
+}
+
+.stripe-label {
+  font-size: 0.8rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.logo-row {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-row li {
+  font-size: 0.85rem;
+  color: var(--navy);
+  opacity: 0.6;
+}
+
+/* --- Sections --- */
+
+.section {
+  padding: 80px 24px;
+  border-bottom: 4px solid var(--navy);
+}
+
+.section-invert {
+  background: var(--navy);
+}
+
+.section-invert h2,
+.section-invert p,
+.section-invert .stat-num,
+.section-invert .stat-label,
+.section-invert .agenda-time,
+.section-invert .agenda-title {
+  color: var(--white);
+}
+
+.section-lede {
+  max-width: 780px;
+  font-size: 1rem;
+}
+
+/* --- Grids / cards --- */
+
+.grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  border: 2px solid var(--navy);
+  padding: 24px;
+}
+
+.card-index {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* --- Stats --- */
+
+.stat-grid {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* --- Agenda --- */
+
+.agenda {
+  margin-top: 32px;
+  border-top: 2px solid var(--white);
+}
+
+.agenda-item {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--white);
+}
+
+.agenda-time {
+  min-width: 70px;
+  font-size: 0.95rem;
+}
+
+.agenda-title {
+  font-size: 0.95rem;
+}
+
+.agenda-light {
+  border-top: 2px solid var(--navy);
+}
+
+.agenda-light .agenda-item {
+  border-bottom: 2px solid var(--navy);
+}
+
+.agenda-light .agenda-time,
+.agenda-light .agenda-title {
+  color: var(--navy);
+}
+
+/* --- Speakers --- */
+
+.speaker-card {
+  border: 2px solid var(--white);
+  padding: 24px;
+  text-align: center;
+}
+
+.speaker-avatar {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 16px auto;
+  background: var(--white);
+}
+
+.speaker-avatar-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%);
+}
+
+.speaker-card h3 {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.speaker-org {
+  font-size: 0.8rem;
+  color: var(--white);
+  opacity: 0.75;
+  margin-bottom: 0;
+}
+
+/* --- Pricing --- */
+
+.pricing-card {
+  text-align: center;
+}
+
+.pricing-card .price {
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+/* --- Quotes --- */
+
+.quote {
+  border: 2px solid var(--navy);
+  padding: 24px;
+  margin: 0;
+}
+
+.quote p {
+  font-size: 0.95rem;
+}
+
+.quote cite {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-style: normal;
+}
+
+/* --- CTA --- */
+
+.cta-section {
+  text-align: center;
+}
+
+.cta-section .section-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Footer --- */
+
+.footer {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}
+
+.fine-print {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  max-width: 780px;
+  margin: 0 auto;
+}

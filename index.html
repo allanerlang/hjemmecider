@@ -60,7 +60,7 @@
     </tr>
   </table>
 
-  <br>
+  <!-- <br>
 
   <table border="6" width="80%" align="center" bgcolor="#ff00ff">
     <tr>
@@ -69,14 +69,25 @@
         <p>2200 København N</p>
       </td>
     </tr>
-  </table>
+  </table> -->
 
   <hr>
 
   <center>
+    <p class="view-counter">Besøg #<span id="view-count">...</span></p>
     <p>© 1998-2026 Hjemme-cider Official Fan Site</p>
     <p>Best viewed in Netscape Navigator 4.0</p>
   </center>
+
+  <script>
+    (function() {
+      var el = document.getElementById('view-count');
+      fetch('https://api.countapi.xyz/hit/hjemmecider/visits')
+        .then(function(r) { return r.json(); })
+        .then(function(d) { if (el && d && typeof d.value === 'number') el.textContent = d.value; })
+        .catch(function() { if (el) el.textContent = '?'; });
+    })();
+  </script>
 
 </body>
 </html>
