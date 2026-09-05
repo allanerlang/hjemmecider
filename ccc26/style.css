@@ -388,6 +388,21 @@ p {
   object-fit: cover;
   object-position: center top;
   filter: grayscale(100%);
+  transition: opacity 0.15s ease;
+}
+
+.speaker-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.speaker-link:hover h3 {
+  text-decoration: underline;
+}
+
+.speaker-link:hover .speaker-avatar-photo {
+  opacity: 0.8;
 }
 
 .speaker-card h3 {
